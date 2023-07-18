@@ -25,19 +25,26 @@ fn printing_function(drink:drink_info){
      }
 
      println!("The cost of the drinks are here :{}",drink.fluidcost);
-
 }
-
-
 fn main(){
 
-    let one{    
+    let one= drink_info{
+        Falvours:flavours::chocolate,
+        fluidcost:32.02,
 
+    } ;
+
+    let two =drink_info{
+        Falvours:flavours::vanilla,
+        fluidcost:67.32,
     };
 
+
+    printing_function(one);
+    printing_function(two);
+
+
+    }
+
     
-
-
-
-}
 
