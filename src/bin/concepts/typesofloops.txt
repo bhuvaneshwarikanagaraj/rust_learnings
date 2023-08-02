@@ -1,0 +1,4 @@
+loop: The loop loop is an infinite loop construct that keeps executing the code block inside it repeatedly until a break statement is encountered. It is used when you want to execute a block of code indefinitely until a certain condition is met.
+while: The while loop executes a block of code as long as a given condition is true. It is used when you want to repeatedly execute a block of code based on a specific condition.
+for in: The for in loop iterates over elements in an iterable collection, like arrays, vectors, ranges, and other types that implement the IntoIterator trait.
+for range: The for range loop allows you to iterate over a range of numbers specified by the .. operator.

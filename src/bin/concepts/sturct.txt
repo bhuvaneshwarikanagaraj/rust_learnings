@@ -1,0 +1,5 @@
+
+In Rust, a structure, often referred to as a "struct," is a custom data type that allows you to group multiple related variables together into a single unit. It is a fundamental building block for creating complex data structures and organizing data in a meaningful way.struct: The keyword used to define a new struct.
+MyStruct: The name of the struct, which you can choose.
+field1, field2, etc.: The names of the fields or members of the struct.
+Type1, Type2, etc.: The data types of the corresponding fields.

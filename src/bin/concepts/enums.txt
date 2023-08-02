@@ -1,0 +1,2 @@
+Enums in Rust are a custom data type that allows you to define a fixed set of distinct values, known as variants. Each variant can have its own associated data or none at all. Enums are particularly useful when you want to represent a value that can take on multiple states or options. They are commonly used for error handling, status representation, and creating custom data structures. With pattern matching, 
+you can easily handle each variant differently, making enums a powerful and expressive feature in Rust.
