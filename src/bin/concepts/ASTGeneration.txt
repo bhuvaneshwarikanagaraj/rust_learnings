@@ -1,0 +1,61 @@
+Parsing and AST Generation:
+After syntax checking, the compiler parses your code to build an Abstract Syntax Tree (AST).
+The AST is a hierarchical representation of your code's structure, breaking it down into a tree-like structure of nodes, where each node represents a language construct (e.g., functions, expressions, statements).
+The AST helps the compiler to understand the relationship and grouping of different components in your code.
+It acts as an intermediary representation that facilitates further analysis and manipulation of the code during the compilation process.
+The AST is a key data structure that helps the compiler organize and understand your code's structure, enabling it to perform various analyses, such as name resolution, type checking, borrow checking, and optimizations. By building an AST, the compiler gains a structured view of your code, which is crucial for the subsequent compilation steps.
+
+
+    ┌───────────────┐
+    │   main()      │
+    └───────┬───────┘
+            │
+     ╔══════▼══════╗
+     ║  Statements  ║
+     ╚═════════════╝
+            │
+    ┌───────▼───────┐
+    │ let x = 42;  │
+    └───────┬───────┘
+            │
+    ┌───────▼───────┐
+    │ let y = 10;  │
+    └───────┬───────┘
+            │
+    ┌───────▼───────┐
+    │let result =  │
+    │  add(x, y); │
+    └───────┬───────┘
+            │
+     ╔══════▼══════╗
+     ║  Statements  ║
+     ╚═════════════╝
+            │
+    ┌───────▼───────┐
+    │let a: i32    │
+    │let b: i32    │
+    └───────┬───────┘
+            │
+    ┌───────▼───────┐
+    │    a + b     │
+    └───────┬───────┘
+
+
+In the visual representation, each box represents a node in the AST, and the arrows show the hierarchical relationship between nodes. The code is divided into statements, each of which contains expressions or variable declarations. The function add(a: i32, b: i32) -> i32 is represented as an expression node in the AST.
+
+This simplified AST showcases how the Rust code is structured and broken down into a tree-like representation. The actual AST is more complex, encompassing the entire codebase and facilitating the compiler's analysis and transformation during the compilation process.
+
+
+Abstract Syntax Trees (ASTs) are generated during the compilation process by the compiler of a programming language. The process of generating an AST typically involves several stages:
+
+Lexical Analysis (Tokenization): The source code is first divided into a sequence of tokens during lexical analysis. Tokens are the basic building blocks of the code, representing keywords, identifiers, literals, operators, and symbols. This process simplifies the subsequent parsing and analysis stages.
+
+Parsing (Syntax Analysis): The stream of tokens is parsed according to the grammar of the programming language. The parser recognizes the syntactic structure of the code and constructs a hierarchical tree-like representation, the Abstract Syntax Tree (AST).
+
+AST Construction: As the parser recognizes different language constructs (e.g., functions, expressions, statements), it constructs corresponding nodes in the AST. Each node represents a specific language construct, and the hierarchy of nodes captures the syntactic structure of the code.
+
+Semantic Analysis: Once the AST is constructed, the compiler performs semantic analysis to check the code for well-formedness and to infer additional information such as types and scope. This stage ensures that the code adheres to the language's semantics and rules.
+
+Optimization (Optional): Some compilers perform optimizations on the AST to improve the efficiency and performance of the generated code. These optimizations can include constant folding, inlining, dead code elimination, and more.
+
+Code Generation: Finally, the compiler generates target-specific code (e.g., machine code) based on the information in the AST. The generated code is optimized, efficient, and tailored for the specific architecture and platform.
