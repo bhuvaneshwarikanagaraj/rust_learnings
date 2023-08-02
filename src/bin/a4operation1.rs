@@ -1,7 +1,7 @@
 fn main(){
 
     let _istrue = true;
-    let _chart='a';
+    let _charter='a';
 
     let num_1:f32=1.11111111111111111111;
     println!("f32 {}",num_1+0.1111101111111);

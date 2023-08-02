@@ -1,8 +1,5 @@
 #![allow(unused)]
-
 use std::io;
-
-
 fn main(){
 
 let age:i32 = 21;
