@@ -1,0 +1,22 @@
+The Rust compiler (rustc) performs several steps when compiling a Rust program. Here's a high-level overview of the steps performed by rustc:
+
+Syntax Checking: The compiler reads your Rust code and checks for syntax errors. It ensures that your code adheres to the rules and structure of the Rust language.
+
+Parsing and AST Generation: After syntax checking, the compiler parses your code to create an Abstract Syntax Tree (AST). The AST represents the hierarchical structure of your code and serves as an intermediate representation for further analysis and optimization.
+
+Name Resolution and Type Checking: The compiler resolves identifiers (variable names, function names, etc.) and checks the types of variables and expressions in your code. It ensures that your code uses variables and functions correctly and consistently.
+
+Borrow Checking and Lifetime Analysis: One of Rust's key features is the borrow checker, which enforces memory safety and prevents data races. The compiler analyzes references and borrows in your code, verifying their validity and ensuring proper memory management.
+
+Intermediate Representation (IR) Generation: After analyzing and checking your code, the compiler generates an intermediate representation (IR) of your program. The IR is a lower-level, platform-independent representation that can be further optimized.
+
+Optimizations: The compiler applies various optimizations to the IR, such as inlining, constant propagation, and loop unrolling, to improve the performance of the generated code.
+
+Code Generation: With optimizations applied, the compiler generates target-specific machine code from the IR. This machine code is specific to the platform or architecture for which you are compiling.
+
+Linking: If your code depends on external libraries or other modules, the compiler links your compiled code with the required libraries, creating a final executable binary.
+
+Executable Output: After completing the compilation and linking process, you have an executable binary that can be run on the target platform. This executable is the result of the compilation process and can be executed to produce the desired output.
+
+These steps are performed by rustc to transform your Rust code into an executable binary. Each step ensures correctness, safety, and efficiency in the generated code, making Rust programs reliable and performant.
+

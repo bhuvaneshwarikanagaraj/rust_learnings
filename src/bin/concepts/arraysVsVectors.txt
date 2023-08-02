@@ -1,0 +1,26 @@
+In Rust, both vectors (Vec) and arrays are used to store collections of elements of the same type. However, they have some key differences in terms of size, ownership, and flexibility:
+
+Size:
+
+Arrays: Arrays have a fixed size that is known at compile time. Once an array is created, its size cannot be changed.
+Vectors: Vectors have a dynamic size that can change during runtime. They can grow or shrink in size as elements are added or removed.
+
+Ownership:
+
+Arrays: Arrays are allocated on the stack by default. They have a fixed size, and ownership of the array is tied to the scope where it is declared. When an array is passed to a function, it is copied entirely, which can be expensive for large arrays.
+Vectors: Vectors are allocated on the heap by default. They are stored in a Vec<T> structure, and ownership of the vector is transferable. When a vector is passed to a function, it is moved (transfer of ownership) rather than copied, making it more efficient for large data.
+
+Initialization:
+
+Arrays: Arrays are usually initialized with fixed values at compile time or using array literals.
+Vectors: Vectors are initialized using the Vec::new() constructor or the vec![] macro. They can be created with or without initial values.
+
+Accessing Elements:
+
+Arrays: Elements in an array are accessed using indexing, which is done at compile time and is always bounds-checked. Accessing an invalid index will cause a panic.
+Vectors: Elements in a vector are also accessed using indexing but are dynamically checked at runtime. If the index is out of bounds, Rust will panic in debug mode. In release mode, accessing an invalid index can cause undefined behavior.
+
+Length:
+
+Arrays: The length of an array is known at compile time and is part of the type signature (e.g., [i32; 5] represents an array of 5 integers).
+Vectors: The length of a vector is not known at compile time and can change at runtime.

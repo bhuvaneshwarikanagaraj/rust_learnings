@@ -1,0 +1,1 @@
+Namespace Separator: The :: operator is primarily used to separate elements in a namespace hierarchy. It allows you to access items (such as functions, constants, types, or modules) that are defined within a particular module or crate.
